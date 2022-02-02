@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MedbaseWeb.Models.Article>
+@{
+    ViewData["Title"] = "Articles | Free Anatomy and Physiology MCQs";
+    ViewData["Description"] = "Our on blog on which we share the best studying techniques, connect to mentors already in the medical field, and bits and pieces to make your medical journey a resounding success. ";
+}
+
+<!-- Header-->
+<header class="bg-white py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-4 col-xxl-4">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bolder text-dark mb-2"
+                        style="font-size:4.75rem">
+                        Articles
+                    </h1>
+                    <p class="lead fw-normal text-black-50 mb-4">
+                        Here we share study tips, links, guides to learn 
+                        <em>faster</em> 
+                        and 
+                        <em>effectively</em>!
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-8 col-xxl-8 text-center">
+                <img class="img-fluid rounded-3 my-5"
+                     src="~/img/article.svg" alt="..." />
+            </div>
+        </div>
+    </div>
+</header>
+
+
+@foreach(var item in Model)
+{
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Blog Post -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <a href="#">
+                            <img style="max-height:250px"
+                                 class="img-thumbnail ml-xl-5"
+                                 src="@Html.DisplayFor(modelItem => item.ImageURL)"
+                                 alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-6 mt-2">
+                        <h2 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h2>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.Summary)</p>
+                        <a asp-action="ArticleView" asp-route-id="@item.Id"
+                            class="btn btn-primary">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                Posted on @Html.DisplayFor(modelItem => item.DatePosted) by @Html.DisplayFor(modelItem => item.Writer)
+            </div>
+        </div>
+    </div>   
+}

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MedbaseWeb.Models.Question>
+
+@{
+    int index = 1;
+    ViewData["Title"] = "Questions";
+}
+
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Refreshing Questions</h4>
+  <p>
+      Each time you refresh this page, you get new questions.
+  </p>
+</div>
+
+@foreach (var question in Model)
+{
+<div class="container-fluid mb-5" style="max-width:500px">
+        <!--Question-->
+        <h5 class="h5">
+            @(index++) - @question.QuestionMain
+        </h5>
+        <input hidden asp-for="@question.Id" />
+        <div class="text-start">
+            <!--Child1-->
+                <p class="card-text">a) @question.ChildA</p>
+            <!--Child2-->
+                <p class="card-text">b) @question.ChildB</p>
+            <!--Child3-->
+                <p class="card-text">c) @question.ChildC</p>
+            <!--Child4-->
+                <p class="card-text">d) @question.ChildD</p>
+            <!--Child5-->
+                <p class="card-text">e) @question.ChildE</p>
+        </div>
+    </div>
+}

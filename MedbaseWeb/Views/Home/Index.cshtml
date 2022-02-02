@@ -1,0 +1,242 @@
+﻿@model IEnumerable<MedbaseWeb.Models.Article>
+
+@{
+    ViewData["Title"] = "Home | Free Anatomy & Physiology MCQs";
+    ViewData["Description"] = "Scoured the world wide web for Anatomy & Physiology Questions? Here is a free repository onall the topics concerned with the core medical health courses. There are also articles on studying better, surviving medical school and college life.";
+    ViewData["Thumbnail"] = "https://drive.google.com/file/d/1chSgNbMIVgUbAbpmr011PfG10PMFF9Qd/view";
+}
+<!-- Header-->
+<header class="bg-white py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-6 col-xl-6 col-xxl-6">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-1 fw-bolder text-dark mb-2">
+                        Welcome to Medbase
+                    </h1>
+                    <p class="lead fw-normal text-black-50 mb-4">
+                        The biggest repository of Anatomy & Physiology MCQs on the internet!
+                    </p>
+                    <br />
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#TestCreator">Get Started</a>
+                                    <a class="btn btn-outline-dark btn-lg px-4" href="#howtoSection">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-xxl-6 text-center">
+                <img class="img-fluid rounded-3 my-5"
+                     src="~/img/home_illustration.svg" alt="..." />
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Random section-->
+<section class="py-5" id="TestCreator">
+    <div class="jumbotron">
+      <h1 class="display-3 fw-bolder">Options</h1>
+        <h1 class="display-6 fw-normal">View All Questions</h1>
+        <p class="lead">View answers, track the ones you've done and have more control</p>
+
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Questions" asp-action="Anatomy">Anatomy</a>
+          </li>
+          <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Questions" asp-action="Physiology">Physiology</a>
+          </li>
+          <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Questions" asp-action="Pharmacology">Pharmacology</a>
+          </li>
+        </ul>
+
+        <hr/>
+
+      <h1 class="display-6 fw-normal">Test Creator</h1>
+      <p class="lead">Use this function to make a custom test out of 20 on each topic in any course</p>
+      <hr class="my-4">
+      <ul class="nav justify-content-center">
+          <li class="dropdown m-1 nav-item">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+            Anatomy
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="1">Upper Limb</a>
+                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="2">Thorax</a>
+                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="3">Abdomen</a>
+                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="4">Pelvis &  Perineum</a>
+                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="5">Lower Limb</a>
+                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="6">Head & Neck</a>
+            </div>
+        </li>
+          <li class="dropdown m-1 nav-item">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+            Physiology
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="7">Cell</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="8">Nerve & Muscle</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="9">Blood</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="10">Endocrinology</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="11">GIT</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="12">Reproduction</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="13">Cardiovascular System</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="14">Renal</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="15">Respiratory</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="16">Neurophysiology</a>
+            </div>
+        </li>
+          <li class="dropdown m-1 nav-item">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+            Pharmacology
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="17">Pharmacokinetics & Pharmacodynamics</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="18">Neuro & Psycho-pharmacology</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="19">Analgesics</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="20">Antivirals & Antiretrovirals</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="21">Antifungals & Antihelminths</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="22">Antibacterials & Anti-TB Drugs</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="23">Local & General Anaesthetics</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="24">Cardiovascular Pharmacology</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="25">Endocrine Pharmacology</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="26">GIT Pharmacology</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="27">Anti-asthmatics, Anticoagulants & Antineoplastic Drugs</a>
+            </div>
+        </li>
+      </ul>
+    </div>
+</section>
+
+<!-- Blog preview section-->
+<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+                <div class="text-center">
+                    <h2 class="fw-bolder">From our articles</h2>
+                    <p class="lead fw-normal text-muted mb-5">Studying methods, books, tips and tricks</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gx-5">
+            @foreach(Article item in Model)
+                {
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.ImageURL)" alt="..." />
+                                <div class="card-body p-4">
+                                    <a class="text-decoration-none link-dark stretched-link" asp-action="ArticleView" asp-route-id="@item.Id">
+                                        <h5 class="card-title mb-3">
+                                            @Html.DisplayFor(modelItem => item.Title)
+                                        </h5>
+                                    </a>
+                                    <p class="card-text mb-0">
+                                        @Html.DisplayFor(modelItem => item.Summary)
+                                    </p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex align-items-end justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <div class="small">
+                                                <div class="fw-bold">@Html.DisplayFor(modelItem => item.Writer)</div>
+                                                <div class="text-muted">@Html.DisplayFor(modelItem => item.DatePosted)</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                }
+        </div>
+
+            <div class="d-flex text-center justify-content-center">
+                <a class="btn btn-outline-primary btn-lg px-4 me-sm-3" asp-controller="Articles" asp-action="Index">
+                    Go to Articles
+                </a>
+            </div>
+    </div>
+</section>
+
+
+<!-- Testimonial section-->
+<div class="py-5 bg-light">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-10 col-xl-7">
+                <div class="text-center">
+                    <div class="h3 mb-4">
+                        <em>"Working with Medbase has saved me tons of studying time 
+                        when preparing for tests!
+                         I am now more efficient in studying because I have a ready source of 
+                         questions to quiz myself at the end of the day."</em>
+                     </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div class="fw-bold h6">
+                            Tadiwanashe Mawere
+                            <span class="fw-bold text-primary mx-1">/</span>
+                            Nursing, UZ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--How to Sections-->
+<div class="py-5" id="howtoSection">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-4 col-xl-7">
+                <img class="img-fluid rounded-3 my-5"
+                     src="~/img/how_to.svg" alt="..." />
+            </div>
+            <div class="col-lg-8 col-xl-5 text-center">
+                <div class="text-dark">
+                    <h2 class="text-dark">How to use Medbase</h2>
+
+                    <p class="lead fw-normal text-muted mb-0">
+                        You can load question with or without answers.
+                        We suggest you first attempt the questions without seeing the answers. 
+                        You will remember the content better that way.
+                    </p>
+                    <br/>
+                    <p class="lead fw-normal text-muted mb-0">
+                        Medicine is a big field, as such some answers may be wrong due to errors in transcription or something else. 
+                        <br/>
+                        If you find a question with a wrong answer, we have placed a button on each question so that you can give us your suggested answer and that we make the necessary adjustments. 
+                        <br/>
+                        We, and other students would greatly appreciate your feedback.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr/>
+<!--Mobile App Sections-->
+<div class="py-5" id="MobileApplication">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-5 text-center">
+                <div class="text-dark">
+                    <h2 class="text-dark">Medbase App for Android and iOS</h2>
+
+                    <p class="lead fw-normal text-muted mb-0">
+                        We are working hard for you to be able to access the questions offline
+                        through a mobile application which is in the works. 
+                        Release date is expected to be Q2 2022.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xl-7">
+                <img class="img-fluid rounded-3 my-5"
+                     src="~/img/mobile_application.svg" alt="..." />
+            </div>
+        </div>
+    </div>
+</div>
