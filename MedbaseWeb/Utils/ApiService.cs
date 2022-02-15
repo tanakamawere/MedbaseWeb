@@ -7,7 +7,7 @@
         private HttpClient _httpClient;
         public string GetAddress()
         {
-            return "https://localhost:7076";
+            return "https://medbaseapi.azurewebsites.net";
         }
 
         public PagedList<Question> GetQuestions(QueryOptions options)
@@ -18,10 +18,18 @@
             HttpResponseMessage responseTask = _httpClient
                 .GetAsync($"{_httpClient.BaseAddress}/{options.Topic}").Result;
 
-            if (responseTask.IsSuccessStatusCode)
+            try
             {
-                string? readJob = responseTask.Content.ReadAsStringAsync().Result;
-                questions = JsonConvert.DeserializeObject<List<Question>>(readJob);
+                if (responseTask.IsSuccessStatusCode)
+                {
+                    string? readJob = responseTask.Content.ReadAsStringAsync().Result;
+                    questions = JsonConvert.DeserializeObject<List<Question>>(readJob);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
             return new PagedList<Question>(questions, options);
         }
@@ -33,10 +41,18 @@
             HttpResponseMessage responseTask = _httpClient
                 .GetAsync($"{_httpClient.BaseAddress}/{topic}/{number}").Result;
 
-            if (responseTask.IsSuccessStatusCode)
+            try
             {
-                string? readJob = responseTask.Content.ReadAsStringAsync().Result;
-                questions = JsonConvert.DeserializeObject<List<Question>>(readJob);
+                if (responseTask.IsSuccessStatusCode)
+                {
+                    string? readJob = responseTask.Content.ReadAsStringAsync().Result;
+                    questions = JsonConvert.DeserializeObject<List<Question>>(readJob);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
             return questions;
         }
@@ -44,14 +60,22 @@
         {
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri($"{GetAddress()}/articles");
-            HttpResponseMessage responseTask = _httpClient.GetAsync($"{_httpClient.BaseAddress}/select/3").Result;
+            HttpResponseMessage responseTask = _httpClient.GetAsync($"{_httpClient.BaseAddress}/select/6").Result;
 
             Console.WriteLine(_httpClient.BaseAddress.ToString());
 
-            if (responseTask.IsSuccessStatusCode)
+            try
             {
-                string readJob = responseTask.Content.ReadAsStringAsync().Result;
-                articles = JsonConvert.DeserializeObject<List<Article>>(readJob);
+                if (responseTask.IsSuccessStatusCode)
+                {
+                    string readJob = responseTask.Content.ReadAsStringAsync().Result;
+                    articles = JsonConvert.DeserializeObject<List<Article>>(readJob);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
             return articles;
         }
@@ -61,10 +85,17 @@
             _httpClient.BaseAddress = new Uri($"{GetAddress()}/articles");
             HttpResponseMessage responseTask = _httpClient.GetAsync(_httpClient.BaseAddress).Result;
 
-            if (responseTask.IsSuccessStatusCode)
+            try
             {
-                string readJob = responseTask.Content.ReadAsStringAsync().Result;
-                articles = JsonConvert.DeserializeObject<List<Article>>(readJob);
+                if (responseTask.IsSuccessStatusCode)
+                {
+                    string readJob = responseTask.Content.ReadAsStringAsync().Result;
+                    articles = JsonConvert.DeserializeObject<List<Article>>(readJob);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
             return articles;
         }
@@ -75,10 +106,18 @@
             _httpClient.BaseAddress = new Uri($"{GetAddress()}/articles");
             HttpResponseMessage responseTask = _httpClient.GetAsync($"{_httpClient.BaseAddress}/{id}").Result;
 
-            if (responseTask.IsSuccessStatusCode)
+            try
             {
-                string readJob = responseTask.Content.ReadAsStringAsync().Result;
-                article = JsonConvert.DeserializeObject<Article>(readJob);
+                if (responseTask.IsSuccessStatusCode)
+                {
+                    string readJob = responseTask.Content.ReadAsStringAsync().Result;
+                    article = JsonConvert.DeserializeObject<Article>(readJob);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
             return article;
         }

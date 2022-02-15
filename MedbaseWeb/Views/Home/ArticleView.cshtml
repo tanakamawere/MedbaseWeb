@@ -7,39 +7,54 @@
     ViewData["Thumbnail"] = Html.DisplayFor(model => model.ImageURL);
 }
 
-<div class="container">
+<div class="container">   
+  <!-- Page Content -->
+  <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">
-        @Html.DisplayFor(model => model.Title)
-        <small>
-            by
-            <a href="#">@Html.DisplayFor(model => model.Writer)</a>
-        </small>
+    <h1 class="mt-4 mb-3">@Html.DisplayFor(model => model.Title)
+      <small>by
+        <a href="#">@Html.DisplayFor(model => model.Writer)</a>
+      </small>
     </h1>
+
 
     <div class="row">
 
-        <!-- Post Content Column -->
-        <div class="col-lg-8">
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
 
-            <!-- Preview Image -->
-            <img class="img-fluid rounded" src="@Html.DisplayFor(model => model.ImageURL)" alt="">
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="@Html.DisplayFor(model => model.ImageURL)" alt="">
 
-            <hr>
+        <hr>
 
-            <!-- Date/Time -->
-            <p>@Html.DisplayFor(model => model.DatePosted)</p>
+        <!-- Date/Time -->
+        <p>@Html.DisplayFor(model => model.DatePosted)</p>
 
-            <hr>
-            <!--Body-->
+        <hr>
+
+        <!-- Post Content -->
+        
             <p>@Html.Raw(Model.Body)</p>
-            
+      </div>
 
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+
+        <!-- Side Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">More to read?</h5>
+          <div class="card-body">
+            Go back to <a class="ml-5" asp-action="Articles">Articles</a>.
+          </div>
         </div>
 
-        <div>
-            <a class="ml-5" asp-action="Articles">⬅Back to List</a>
-        </div>
+      </div>
+
     </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
 </div>

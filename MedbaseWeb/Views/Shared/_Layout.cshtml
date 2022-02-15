@@ -8,6 +8,14 @@
     <meta name="keywords" content="Medbase, Anatomy, Questions, Physiology, Pharmacology, MCQs, Answers, Medical School, Multiple Choice Questions"/>
     <meta name="thumbnail" content="@ViewData["Thumbnail"]"/>
 
+    <!--WhatsApp Metas-->
+    <meta property="og:site_name" content="Medbase">
+    <meta property="og:title" content="Medbase - @ViewData["Title"]" />
+    <meta property="og:description" content="@ViewData["Description"]" />
+    <meta property="og:image" itemprop="image" content="@ViewData["Thumbnail"]">
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1440432930" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="~/favicon.ico" type="image/x-icon" rel="icon" />
@@ -40,13 +48,13 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Questions" asp-action="Anatomy">Anatomy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Questions" asp-action="Pharmacology">Pharmacology</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Articles" asp-action="Index">Articles</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
                 </div>
@@ -62,6 +70,7 @@
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - Medbase - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            - <a asp-area="" asp-controller="Home" asp-action="About">About</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

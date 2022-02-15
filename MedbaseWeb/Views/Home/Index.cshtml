@@ -2,8 +2,9 @@
 
 @{
     ViewData["Title"] = "Home | Free Anatomy & Physiology MCQs";
-    ViewData["Description"] = "Scoured the world wide web for Anatomy & Physiology Questions? Here is a free repository onall the topics concerned with the core medical health courses. There are also articles on studying better, surviving medical school and college life.";
-    ViewData["Thumbnail"] = "https://drive.google.com/file/d/1chSgNbMIVgUbAbpmr011PfG10PMFF9Qd/view";
+    ViewData["Description"] = "Welcome to the home of medical school articles, study tips and multiple choice questions. Dive in and take a look.";
+    ViewData["Thumbnail"] = "https://drive.google.com/file/d/1-fuVaQc1Vw6c6xqupDYE2PhgRKxXF5Qw/view?usp=sharing";
+    ViewData["Keywords"] = "Anatomy, Questions, MCQs, Pharmacology, Physiology";
 }
 <!-- Header-->
 <header class="bg-white py-5">
@@ -15,11 +16,20 @@
                         Welcome to Medbase
                     </h1>
                     <p class="lead fw-normal text-black-50 mb-4">
-                        The biggest repository of Anatomy & Physiology MCQs on the internet!
+                        The biggest repository of Anatomy & Physiology MCQs on the internet!😉
                     </p>
                     <br />
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#TestCreator">Get Started</a>
+                                    <div class="dropdown">
+                                      <a class="btn btn-primary btn-lg px-4 me-sm-3 dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                                        Get Started
+                                      </a>
+                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Questions" asp-action="Anatomy">Anatomy</a>
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="Questions" asp-action="Physiology">Physiology</a>
+                                        <a class="nav-link text-dark" href="#TestCreator">Test Creator</a>
+                                      </div>
+                                    </div>
                                     <a class="btn btn-outline-dark btn-lg px-4" href="#howtoSection">Learn More</a>
                     </div>
                 </div>
@@ -32,82 +42,7 @@
     </div>
 </header>
 
-<!-- Random section-->
-<section class="py-5" id="TestCreator">
-    <div class="jumbotron">
-      <h1 class="display-3 fw-bolder">Options</h1>
-        <h1 class="display-6 fw-normal">View All Questions</h1>
-        <p class="lead">View answers, track the ones you've done and have more control</p>
-
-        <ul class="nav justify-content-center">
-          <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Questions" asp-action="Anatomy">Anatomy</a>
-          </li>
-          <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Questions" asp-action="Physiology">Physiology</a>
-          </li>
-          <li class="nav-item">
-                <a class="nav-link" asp-area="" asp-controller="Questions" asp-action="Pharmacology">Pharmacology</a>
-          </li>
-        </ul>
-
-        <hr/>
-
-      <h1 class="display-6 fw-normal">Test Creator</h1>
-      <p class="lead">Use this function to make a custom test out of 20 on each topic in any course</p>
-      <hr class="my-4">
-      <ul class="nav justify-content-center">
-          <li class="dropdown m-1 nav-item">
-            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
-            Anatomy
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="1">Upper Limb</a>
-                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="2">Thorax</a>
-                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="3">Abdomen</a>
-                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="4">Pelvis &  Perineum</a>
-                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="5">Lower Limb</a>
-                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="6">Head & Neck</a>
-            </div>
-        </li>
-          <li class="dropdown m-1 nav-item">
-            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
-            Physiology
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="7">Cell</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="8">Nerve & Muscle</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="9">Blood</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="10">Endocrinology</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="11">GIT</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="12">Reproduction</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="13">Cardiovascular System</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="14">Renal</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="15">Respiratory</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="16">Neurophysiology</a>
-            </div>
-        </li>
-          <li class="dropdown m-1 nav-item">
-            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
-            Pharmacology
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="17">Pharmacokinetics & Pharmacodynamics</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="18">Neuro & Psycho-pharmacology</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="19">Analgesics</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="20">Antivirals & Antiretrovirals</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="21">Antifungals & Antihelminths</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="22">Antibacterials & Anti-TB Drugs</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="23">Local & General Anaesthetics</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="24">Cardiovascular Pharmacology</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="25">Endocrine Pharmacology</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="26">GIT Pharmacology</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="27">Anti-asthmatics, Anticoagulants & Antineoplastic Drugs</a>
-            </div>
-        </li>
-      </ul>
-    </div>
-</section>
+<hr />
 
 <!-- Blog preview section-->
 <section class="py-5">
@@ -115,8 +50,8 @@
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-8 col-xl-6">
                 <div class="text-center">
-                    <h2 class="fw-bolder">From our articles</h2>
-                    <p class="lead fw-normal text-muted mb-5">Studying methods, books, tips and tricks</p>
+                    <h2 class="fw-bolder">😁Want to learn something new?</h2>
+                    <p class="lead fw-normal text-muted mb-5">Read our articles on studying methods, books and other tips and tricks</p>
                 </div>
             </div>
         </div>
@@ -159,7 +94,76 @@
             </div>
     </div>
 </section>
+<!-- Random section-->
+<section class="py-5" id="TestCreator">
+    <div class="jumbotron">
+      <h1 class="display-3 fw-bolder">Test Creator</h1>
+      <p class="lead">Make a custom test out of 20 on each topic in any course</p>
+      <hr class="my-4">
+      <ul class="nav justify-content-center">
+          <li class="dropdown m-1 nav-item">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+            Anatomy
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="1">Upper Limb</a>
+                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="2">Thorax</a>
+                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="3">Abdomen</a>
+                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="4">Pelvis &  Perineum</a>
+                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="5">Lower Limb</a>
+                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="6">Head & Neck</a>
+            </div>
+        </li>
+          <li class="dropdown m-1 nav-item">
+            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+            Physiology
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="7">Cell</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="8">Nerve & Muscle</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="9">Blood</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="10">Endocrinology</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="11">GIT</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="12">Reproduction</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="13">Cardiovascular System</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="14">Renal</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="15">Respiratory</a>
+                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="16">Neurophysiology</a>
+            </div>
+        </li>
+      </ul>
+    </div>
+</section>
 
+
+<!--How to Sections-->
+<div class="py-5" id="howtoSection">
+    <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-4 col-xl-7">
+                <img class="img-fluid rounded-3 my-5"
+                     src="~/img/how_to.svg" alt="..." />
+            </div>
+            <div class="col-lg-8 col-xl-5 text-center">
+                <div class="text-dark">
+                    <h2 class="text-dark">How to use Medbase</h2>
+
+                    <p class="lead fw-normal text-muted mb-0">
+                        From the navigation bar, you can select Anatomy or Physiology.
+                        <br />
+                        Then select the topic of your choice.
+                        You can load question with or without answers
+                    </p>
+                    <br/>
+                    <p class="lead fw-normal text-muted mb-0">
+                        That's all there is
+                        <br/>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Testimonial section-->
 <div class="py-5 bg-light">
@@ -175,7 +179,7 @@
                      </div>
                     <div class="d-flex align-items-center justify-content-center">
                         <div class="fw-bold h6">
-                            Tadiwanashe Mawere
+                            Tadiwanashe Gandiza
                             <span class="fw-bold text-primary mx-1">/</span>
                             Nursing, UZ
                         </div>
@@ -186,38 +190,6 @@
     </div>
 </div>
 
-<!--How to Sections-->
-<div class="py-5" id="howtoSection">
-    <div class="container px-5 my-5">
-        <div class="row gx-5 align-items-center justify-content-center">
-            <div class="col-lg-4 col-xl-7">
-                <img class="img-fluid rounded-3 my-5"
-                     src="~/img/how_to.svg" alt="..." />
-            </div>
-            <div class="col-lg-8 col-xl-5 text-center">
-                <div class="text-dark">
-                    <h2 class="text-dark">How to use Medbase</h2>
-
-                    <p class="lead fw-normal text-muted mb-0">
-                        You can load question with or without answers.
-                        We suggest you first attempt the questions without seeing the answers. 
-                        You will remember the content better that way.
-                    </p>
-                    <br/>
-                    <p class="lead fw-normal text-muted mb-0">
-                        Medicine is a big field, as such some answers may be wrong due to errors in transcription or something else. 
-                        <br/>
-                        If you find a question with a wrong answer, we have placed a button on each question so that you can give us your suggested answer and that we make the necessary adjustments. 
-                        <br/>
-                        We, and other students would greatly appreciate your feedback.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<hr/>
 <!--Mobile App Sections-->
 <div class="py-5" id="MobileApplication">
     <div class="container px-5 my-5">

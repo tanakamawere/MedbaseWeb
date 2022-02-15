@@ -46,25 +46,7 @@ namespace MedbaseWeb.Controllers
             questions1 = new List<Question>();
             _httpClient = new HttpClient();
         }
-        [Route("test_creator")]
-        public IActionResult CourseSelection()
-        {
-            ViewBag.Courses = Courses;
-            return View();
-        }
-        [Route("customise")]
-        public IActionResult Customise(string courseSelected)
-        {
-            if (courseSelected == "Anatomy")
-            {
-                ViewBag.Topics = anatomy;
-            }
-            else if (courseSelected == "Physiology")
-            {
-                ViewBag.Topics = physiology;
-            }
-            return View();
-        }
+        [Route("anatomy")]
         public IActionResult Anatomy(QueryOptions options)
         {
             if (options.AnswerVisibility == 1)
@@ -77,6 +59,7 @@ namespace MedbaseWeb.Controllers
             }
             return View(apiService.GetQuestions(options));
         }
+        [Route("physiology")]
         public IActionResult Physiology(QueryOptions options)
         {
             if (options.AnswerVisibility == 1)
@@ -89,6 +72,7 @@ namespace MedbaseWeb.Controllers
             }
             return View(apiService.GetQuestions(options));
         }
+        [Route("pharmacology")]
         public IActionResult Pharmacology(QueryOptions options)
         {
             if (options.AnswerVisibility == 1)

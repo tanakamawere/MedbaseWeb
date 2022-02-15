@@ -11,6 +11,7 @@
     ViewData["Title"] = "Anatomy | Free Anatomy MCQs";
     ViewData["Description"] = "Choose the topic from the list below, hit load and get started.";
     ViewData["Keywords"] = "Anatomy, Questions, MCQs, Upper Limb, Lower Limb, Abdomen, Thorax, Neuroanatomy";
+    ViewData["Thumbnail"] = "https://drive.google.com/file/d/11dReUZPYJ0DQIXjeAouq0JsIXN9TptQK/view?usp=sharing";
 }
 
 <partial name="PagesAnatomy" model="Model"/>
@@ -22,7 +23,7 @@
         <div class="row">
             <div class="col">
                 <h5 class="h5">
-                    @(index++) - @question.QuestionMain
+                    @question.Id - @question.QuestionMain
                 </h5>
             </div>
             <div class="col col-2">

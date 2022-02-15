@@ -1,7 +1,9 @@
 ﻿@model IEnumerable<MedbaseWeb.Models.Article>
 @{
     ViewData["Title"] = "Articles | Free Anatomy and Physiology MCQs";
-    ViewData["Description"] = "Our on blog on which we share the best studying techniques, connect to mentors already in the medical field, and bits and pieces to make your medical journey a resounding success. ";
+    ViewData["Description"] = "We share the best studying techniques, review medical material, discuss mental health and other bits to make your medical journey a resounding success.";
+    ViewData["Thumbnail"] = "https://drive.google.com/file/d/14oaPYynCCjnvim8l0NvLL9bOrtoA_Kri/view?usp=sharing";
+    ViewData["Keywords"] = "Medical Blog, Articles, Study, Anatomy, Physiology, School, College, University";
 }
 
 <!-- Header-->
@@ -32,32 +34,26 @@
 
 
 @foreach(var item in Model)
-{
-    <!-- Page Content -->
-    <div class="container">
-        <!-- Blog Post -->
-        <div class="card mb-4">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <a href="#">
-                            <img style="max-height:250px"
-                                 class="img-thumbnail ml-xl-5"
-                                 src="@Html.DisplayFor(modelItem => item.ImageURL)"
-                                 alt="">
-                        </a>
-                    </div>
-                    <div class="col-lg-6 mt-2">
-                        <h2 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h2>
-                        <p class="card-text">@Html.DisplayFor(modelItem => item.Summary)</p>
-                        <a asp-action="ArticleView" asp-route-id="@item.Id"
-                            class="btn btn-primary">Read More &rarr;</a>
+{    
+            <!-- Page Content-->
+                <div class="container px-2 mb-3">
+                    <div class="card border-0 shadow rounded-3 overflow-hidden">
+                        <div class="card-body p-0">
+                            <div class="row gx-0">
+                                <div class="col-lg-6 col-xl-5 py-lg-5">
+                                    <div class="p-4 p-md-5">
+                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">By @Html.DisplayFor(modelItem => item.Writer) on @Html.DisplayFor(modelItem => item.DatePosted)</div>
+                                        <div class="h2 fw-bolder">@Html.DisplayFor(modelItem => item.Title)</div>
+                                        <p>@Html.DisplayFor(modelItem => item.Summary)</p>
+                                        <a class="stretched-link text-decoration-none" asp-action="ArticleView" asp-route-id="@item.Id">
+                                            Read more
+                                            <i class="bi bi-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-xl-7"><div class="bg-featured-blog" style="background-image: url('@Html.DisplayFor(modelItem => item.ImageURL)')"></div></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-footer text-muted">
-                Posted on @Html.DisplayFor(modelItem => item.DatePosted) by @Html.DisplayFor(modelItem => item.Writer)
-            </div>
-        </div>
-    </div>   
 }
