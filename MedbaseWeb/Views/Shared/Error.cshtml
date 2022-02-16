@@ -3,12 +3,23 @@
     ViewData["Title"] = "Error";
 }
 
-@if (Model?.ShowRequestId ?? false)
-{
-    <p>
-        <strong>Request ID:</strong> <code>@Model?.RequestId</code>
-    </p>
-}
+<div class="text-center h6">
+       Sorry. 
+       <br/>
+       Seems like something has gone horribly wrong.
+       <br/>
+       <br/>
+       Try 
+       <ul>
+           <li>
+               <p>Refreshing the page</p>
+           </li>
+           <li>
+               <p>Looking for another page</p>
+           </li>
+       </ul>
+</div>
+
 <div class="text-center">
                 <img class="img-fluid rounded-3 my-5"
                      src="~/img/error.svg" alt="..." />
