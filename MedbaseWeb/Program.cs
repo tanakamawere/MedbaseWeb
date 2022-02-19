@@ -21,6 +21,17 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseStatusCodePages();
+
+app.Use(async (context, next) => 
+{
+    await next();
+    if (context.Response.StatusCode == 404)
+    {
+        context.Request.Path = "/Home/Error";
+        await next();
+    }
+}); 
 
 app.UseAuthentication();
 app.UseAuthorization();

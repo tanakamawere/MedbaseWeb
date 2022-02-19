@@ -33,9 +33,9 @@
          </button>
 
 
-     <div class="text-center mt-2">
+     <div class="text-center m-2">
 
-            <select name="options.pageSize" class="form-control ml-1 mr-1 mb-2">
+            <select name="options.pageSize" class="form-control ml-1 mr-1">
                  <option selected disabled>Questions/page</option>
                  @foreach (int val in new int[] { 5, 10}) 
                  {
@@ -59,7 +59,7 @@
                 }
              </select>
 
-            <select name="options.answerVisibility" class="form-control ml-1 mr-1 mb-2">
+            <select name="options.answerVisibility" class="form-control ml-1 mr-1">
                  <option selected disabled>Toggle Answers</option>
                  @foreach (int val in new int[] { 0, 1}) 
                  {
@@ -84,7 +84,7 @@
                  MCQs on Selected Topic
             </h6>
              <input type="hidden" name="options.currentPage" value="1" />
-             <button type="submit" class="btn btn-secondary">Load</button>
+             <button type="submit" class="btn btn-primary">Load</button>
      </div>
 </form>
 

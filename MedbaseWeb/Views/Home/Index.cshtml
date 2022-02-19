@@ -34,7 +34,7 @@
                                         <a class="nav-link text-dark" href="#TestCreator">Test Creator</a>
                                       </div>
                                     </div>
-                                    <a class="btn btn-outline-dark btn-lg px-4" href="#howtoSection">Learn More</a>
+                                    <a class="btn btn-outline-dark btn-lg px-4" href="#howToSection">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -87,11 +87,11 @@
                 }
         </div>
 
-            <div class="d-flex text-center justify-content-center">
-                <a class="btn btn-outline-primary btn-lg px-4 me-sm-3" asp-controller="Articles" asp-action="Index">
-                    Go to Articles
-                </a>
-            </div>
+        <div class="d-flex text-center justify-content-center">
+            <a class="btn btn-outline-primary btn-lg px-4 me-sm-3" asp-controller="Articles" asp-action="Index">
+                Go to Articles
+            </a>
+        </div>
     </div>
 </section>
 <!-- Random section-->
@@ -135,31 +135,32 @@
     </div>
 </section>
 
-
-<!--How to Sections-->
-<div class="py-5" id="howtoSection">
+<!--Mobile App Sections-->
+<div class="py-5" id="howToSection">
     <div class="container px-5 my-5">
         <div class="row gx-5 align-items-center justify-content-center">
-            <div class="col-lg-4 col-xl-7">
-                <img class="img-fluid rounded-3 my-5"
-                     src="~/img/how_to.svg" alt="..." />
-            </div>
             <div class="col-lg-8 col-xl-5 text-center">
                 <div class="text-dark">
-                    <h2 class="text-dark">How to use Medbase</h2>
+                    
+                    <h2 class="text-dark">How To</h2>
 
                     <p class="lead fw-normal text-muted mb-0">
                         From the navigation bar, you can select Anatomy or Physiology.
-                        <br />
                         Then select the topic of your choice.
-                        You can load question with or without answers
                     </p>
                     <br/>
+                    <h4 class="text-dark">Medbase App for Android and iOS</h4>
+
                     <p class="lead fw-normal text-muted mb-0">
-                        That's all there is
-                        <br/>
+                        We are working hard for you to be able to access the questions offline
+                        through a mobile application which is in the works. 
+                        Release date is expected to be Q2 2022.
                     </p>
                 </div>
+            </div>
+            <div class="col-lg-4 col-xl-7">
+                <img class="img-fluid rounded-3 my-5"
+                     src="~/img/mobile_application.svg" alt="..." />
             </div>
         </div>
     </div>
@@ -190,25 +191,18 @@
     </div>
 </div>
 
-<!--Mobile App Sections-->
-<div class="py-5" id="MobileApplication">
-    <div class="container px-5 my-5">
-        <div class="row gx-5 align-items-center justify-content-center">
-            <div class="col-lg-8 col-xl-5 text-center">
-                <div class="text-dark">
-                    <h2 class="text-dark">Medbase App for Android and iOS</h2>
-
-                    <p class="lead fw-normal text-muted mb-0">
-                        We are working hard for you to be able to access the questions offline
-                        through a mobile application which is in the works. 
-                        Release date is expected to be Q2 2022.
-                    </p>
-                </div>
+<!-- Call to action-->
+<aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+    <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+        <div class="mb-4 mb-xl-0">
+            <div class="fs-3 fw-bold text-white">New articles, delivered to you.</div>
+            <div class="text-white-50">Sign up for our emails for the latest updates.</div>
+        </div>
+        <div class="ms-xl-4">
+            <div class="input-group mb-2">
+                <div style="text-align: left" class="sender-form-field" data-sender-form-id="kzte3j42ejaywdh66hl"></div>
             </div>
-            <div class="col-lg-4 col-xl-7">
-                <img class="img-fluid rounded-3 my-5"
-                     src="~/img/mobile_application.svg" alt="..." />
-            </div>
+            <div class="small text-white-50">We care about privacy, and will never share your data.</div>
         </div>
     </div>
-</div>
+</aside>

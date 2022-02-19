@@ -16,6 +16,13 @@
 
 <partial name="PagesAnatomy" model="Model"/>
 
+@{
+    if (ViewBag.Visibility == 1)
+    {
+        <partial name="AnswerDisclaimer" />
+    }
+}
+
 @foreach (var question in Model)
 {
     <div class="container-fluid mb-5" style="max-width:500px">

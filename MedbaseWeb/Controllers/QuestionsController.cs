@@ -72,19 +72,6 @@ namespace MedbaseWeb.Controllers
             }
             return View(apiService.GetQuestions(options));
         }
-        [Route("pharmacology")]
-        public IActionResult Pharmacology(QueryOptions options)
-        {
-            if (options.AnswerVisibility == 1)
-            {
-                ViewBag.Visibility = 1;
-            }
-            else
-            {
-                ViewBag.Visibility = 0;
-            }
-            return View(apiService.GetQuestions(options));
-        }
         public IActionResult Index(int topicSelected)
         {
             return View(apiService.GetRandomQuestions(topicSelected, 20));
