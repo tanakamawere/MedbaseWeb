@@ -62,8 +62,6 @@
             _httpClient.BaseAddress = new Uri($"{GetAddress()}/articles");
             HttpResponseMessage responseTask = _httpClient.GetAsync($"{_httpClient.BaseAddress}/select/6").Result;
 
-            Console.WriteLine(_httpClient.BaseAddress.ToString());
-
             try
             {
                 if (responseTask.IsSuccessStatusCode)

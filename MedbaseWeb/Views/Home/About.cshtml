@@ -1,10 +1,15 @@
 ﻿@{
     ViewData["Title"] = "About | Free Anatomy & Physiology MCQs";
-    ViewData["Description"] = "What, who, where, how, why Medbase. Read all about it here";
+    ViewData["Description"] = "What, who, where, how, why Medbase. Read all about it here"; 
+    ViewData["Thumbnail"] = "http://medbase.co.zw/img/medbase_color.jpeg";
 }
 <header class="bg-white py-5">
     <div class="container px-5">
         <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-xl-6 col-xxl-6 text-center">
+                <img class="img-fluid rounded-3 my-5"
+                     src="~/img/support_us.svg" alt="..." />
+            </div>
             <div class="col-lg-6 col-xl-6 col-xxl-4">
                 <div class="my-5 text-center text-xl-start">
                     <h1 class="display-5 fw-bolder text-dark mb-2"
@@ -17,10 +22,6 @@
                         health sciences field.
                     </p>
                 </div>
-            </div>
-            <div class="col-xl-6 col-xxl-6 text-center">
-                <img class="img-fluid rounded-3 my-5"
-                     src="~/img/support_us.svg" alt="..." />
             </div>
         </div>
     </div>
@@ -37,24 +38,35 @@
         </div>
 
         <!-- Contact cards-->
-        <div class="row gx-5 row-cols-2 py-5 text-center">
+        <div class="row gx-5 row-cols-3 py-5 text-center">
             <div class="col text-center">
                 <i class="bi bi-whatsapp text-dark"
                    style="font-size:larger"></i>
                 <div class="h5 mb-2">Chat with me</div>
                 <p class="text-muted mb-0">
                     If WhatsApp is your preferred channel of communication, 
-                    <a href="https://wa.me/263718086035">
+                    <a href="https://wa.me/263785468923">
                         have at it.
                     </a>
                 </p>
-            </div><div class="col text-center">
+            </div>
+            <div class="col text-center">
                 <i class="bi bi-envelope text-dark"></i>
                 <div class="h5">Send me an email</div>
                 <p class="text-muted mb-0">
                     Get in touch at
-                    <a href="mailto:info@medbase.co.zw?subject=Medbase:%20<Subject%20here>">
-                        info@medbase.co.zw
+                    <a href="mailto:work@tanakamawere.co.zw?subject=Medbase:%20<Subject%20here>">
+                        work@tanakamawere.co.zw
+                    </a>
+                </p>
+            </div>
+            <div class="col text-center">
+                <i class="bi bi-globe text-dark"></i>
+                <div class="h5">Visit my website</div>
+                <p class="text-muted mb-0">
+                    Get in touch at
+                    <a href="https://www.tanakamawere.co.zw">
+                        www.tanakamawere.co.zw
                     </a>
                 </p>
             </div>
@@ -74,11 +86,6 @@
             This website was coded using C# 10 on the dotNET 6 (LTS) platform.
             <br />
             Architectural pattern is ASP.NET MVC (Model-View-Controller)
-        </p>
-        <p class="text-center">
-            <a href="https://www.tanakamawere.co.zw" class="text-decoration-none">
-                The Programmer
-            </a>
         </p>
     </div>
 </section>
