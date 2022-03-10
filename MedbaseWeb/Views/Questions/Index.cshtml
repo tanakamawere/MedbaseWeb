@@ -12,25 +12,64 @@
   </p>
 </div>
 
-@foreach (var question in Model)
-{
-<div class="container-fluid mb-5" style="max-width:500px">
-        <!--Question-->
-        <h5 class="h5">
-            @(index++) - @question.QuestionMain
-        </h5>
-        <input hidden asp-for="@question.Id" />
-        <div class="text-start">
-            <!--Child1-->
-                <p class="card-text">a) @question.ChildA</p>
-            <!--Child2-->
-                <p class="card-text">b) @question.ChildB</p>
-            <!--Child3-->
-                <p class="card-text">c) @question.ChildC</p>
-            <!--Child4-->
-                <p class="card-text">d) @question.ChildD</p>
-            <!--Child5-->
-                <p class="card-text">e) @question.ChildE</p>
-        </div>
-    </div>
-}
+<div class="row">
+        
+      <!-- Ads Sidebar Widgets Column -->
+      <div class="col-md-3">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
+             crossorigin="anonymous"></script>
+        <!-- Vertical Ad Unit -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7010150994074481"
+             data-ad-slot="6500703860"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- Questions Content Column -->
+      <div class="col-lg-6">
+        @foreach (var question in Model)
+                {
+                <div class="container-fluid mb-5" style="max-width:500px">
+                        <!--Question-->
+                        <h5 class="h5">
+                            @(index++) - @question.QuestionMain
+                        </h5>
+                        <input hidden asp-for="@question.Id" />
+                        <div class="text-start">
+                            <!--Child1-->
+                                <p class="card-text">a) @question.ChildA</p>
+                            <!--Child2-->
+                                <p class="card-text">b) @question.ChildB</p>
+                            <!--Child3-->
+                                <p class="card-text">c) @question.ChildC</p>
+                            <!--Child4-->
+                                <p class="card-text">d) @question.ChildD</p>
+                            <!--Child5-->
+                                <p class="card-text">e) @question.ChildE</p>
+                        </div>
+                    </div>
+                }
+      </div>
+
+      <!-- Ads Sidebar Widgets Column -->
+      <div class="col-md-3">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
+             crossorigin="anonymous"></script>
+        <!-- Vertical Ad Unit -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7010150994074481"
+             data-ad-slot="6500703860"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+</div>

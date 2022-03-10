@@ -21,193 +21,234 @@
         <partial name="AnswerDisclaimer" />
     }
 }
+<div class="row">
 
-@foreach (var question in Model)
-{
-    <div class="container-fluid mb-5" style="max-width:500px">
-        <!--Question-->
-        <div class="row">
-            <div class="col">
-                <h5 class="h5">
-                    @question.Id - @question.QuestionMain
-                </h5>
-            </div>
-            <div class="col col-2">
-                <a class="btn"
-                    href="https://wa.me/263785468923?text=Questions%20ID:%20@(question.Id)%20has%20an%20error.%20(Please%20write%20your%20suggested%20answers%20here.)">
-                    <i class="bi bi-flag text-dark"
-                   style="font-size:small"></i>
-                </a>
-            </div>
-        </div>
-        <input hidden asp-for="@question.Id" />
-        <div class="text-start">
-            <!--Child1-->
-            <div class="row">
-                <div class="col">
-                <p class="card-text">a) @question.ChildA</p> 
-                </div>
-                <div class="col col-2">
-                <p class="card-text">
-                        @{
-                            if (ViewBag.Visibility == 1)
-                            {
-                                if (@question.AnswerA == true)
-                                {
-                                    answerA = "True";
-                                }
-                                else if (@question.AnswerA == false)
-                                {
+        <!-- Ads Sidebar Widgets Column -->
+        
+      <!-- Ads Sidebar Widgets Column -->
+      <div class="col-md-3">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
+             crossorigin="anonymous"></script>
+        <!-- Vertical Ad Unit -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7010150994074481"
+             data-ad-slot="6500703860"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
 
-                                    answerA = "False";
-                                }
-                                else if (@question.AnswerA == null)
-                                {
-                                    answerA = "-";
-                                }
-                            }
-                            else
-                            {
+      <!-- Questions Content Column -->
+      <div class="col-lg-6">
+        @foreach (var question in Model)
+        {
+                    <div class="container-fluid mb-5" style="max-width:500px">
+                    <!--Question-->
+                    <div class="row">
+                    <div class="col">
+                        <h5 class="h5">
+                            @question.Id - @question.QuestionMain
+                        </h5>
+                    </div>
+                    <div class="col col-2">
+                        <a class="btn"
+                            href="https://wa.me/263785468923?text=Questions%20ID:%20@(question.Id)%20has%20an%20error.%20(Please%20write%20your%20suggested%20answers%20here.)">
+                            <i class="bi bi-flag text-dark"
+                            style="font-size:small"></i>
+                        </a>
+                    </div>
+                    </div>
+                    <input hidden asp-for="@question.Id" />
+                    <div class="text-start">
+                    <!--Child1-->
+                    <div class="row">
+                        <div class="col">
+                        <p class="card-text">a) @question.ChildA</p> 
+                        </div>
+                        <div class="col col-2">
+                        <p class="card-text">
+                                @{
+                                    if (ViewBag.Visibility == 1)
+                                    {
+                                        if (@question.AnswerA == true)
+                                        {
+                                            answerA = "True";
+                                        }
+                                        else if (@question.AnswerA == false)
+                                        {
+
+                                            answerA = "False";
+                                        }
+                                        else if (@question.AnswerA == null)
+                                        {
+                                            answerA = "-";
+                                        }
+                                    }
+                                    else
+                                    {
                                 
-                            }
-                        }
-                        @(answerA)
-                </p> 
-                </div>
-            </div>
-            <!--Child2-->
-            <div class="row">
-                <div class="col">
-                <p class="card-text">b) @question.ChildB</p> 
-                </div>
-                <div class="col col-2">
-                <p class="card-text">
-                        @{
-                            if (ViewBag.Visibility == 1)
-                            {
-                                if (@question.AnswerB == true)
-                                {
-                                    answerB = "True";
+                                    }
                                 }
-                                else if (@question.AnswerB == false)
-                                {
+                                @(answerA)
+                        </p> 
+                        </div>
+                    </div>
+                    <!--Child2-->
+                    <div class="row">
+                        <div class="col">
+                        <p class="card-text">b) @question.ChildB</p> 
+                        </div>
+                        <div class="col col-2">
+                        <p class="card-text">
+                                @{
+                                    if (ViewBag.Visibility == 1)
+                                    {
+                                        if (@question.AnswerB == true)
+                                        {
+                                            answerB = "True";
+                                        }
+                                        else if (@question.AnswerB == false)
+                                        {
 
-                                    answerB = "False";
-                                }
-                                else if (@question.AnswerB == null)
-                                {
-                                    answerB = "-";
-                                }
-                            }
-                            else
-                            {
+                                            answerB = "False";
+                                        }
+                                        else if (@question.AnswerB == null)
+                                        {
+                                            answerB = "-";
+                                        }
+                                    }
+                                    else
+                                    {
                                 
-                            }
-                        }
-                        @(answerB)
-                </p> 
-                </div>
-            </div>
-            <!--Child3-->
-            <div class="row">
-                <div class="col">
-                <p class="card-text">c) @question.ChildC</p> 
-                </div>
-                <div class="col col-2">
-                <p class="card-text">
+                                    }
+                                }
+                                @(answerB)
+                        </p> 
+                        </div>
+                    </div>
+                    <!--Child3-->
+                    <div class="row">
+                        <div class="col">
+                        <p class="card-text">c) @question.ChildC</p> 
+                        </div>
+                        <div class="col col-2">
+                        <p class="card-text">
                         
-                        @{
-                            if (ViewBag.Visibility == 1)
-                            {
-                                if (@question.AnswerC == true)
-                                {
-                                    answerC = "True";
-                                }
-                                else if (@question.AnswerC == false)
-                                {
+                                @{
+                                    if (ViewBag.Visibility == 1)
+                                    {
+                                        if (@question.AnswerC == true)
+                                        {
+                                            answerC = "True";
+                                        }
+                                        else if (@question.AnswerC == false)
+                                        {
 
-                                    answerC = "False";
-                                }
-                                else if (@question.AnswerC == null)
-                                {
-                                    answerC = "-";
-                                }
-                            }
-                            else
-                            {
+                                            answerC = "False";
+                                        }
+                                        else if (@question.AnswerC == null)
+                                        {
+                                            answerC = "-";
+                                        }
+                                    }
+                                    else
+                                    {
                                 
-                            }
-                        }
-                        @(answerC)
-                </p> 
-                </div>
-            </div>
-            <!--Child4-->
-            <div class="row">
-                <div class="col">
-                <p class="card-text">d) @question.ChildD</p> 
-                </div>
-                <div class="col col-2">
-                <p class="card-text">
+                                    }
+                                }
+                                @(answerC)
+                        </p> 
+                        </div>
+                    </div>
+                    <!--Child4-->
+                    <div class="row">
+                        <div class="col">
+                        <p class="card-text">d) @question.ChildD</p> 
+                        </div>
+                        <div class="col col-2">
+                        <p class="card-text">
                        
-                        @{
-                            if (ViewBag.Visibility == 1)
-                            {
-                                if (@question.AnswerD == true)
-                                {
-                                    answerD = "True";
-                                }
-                                else if (@question.AnswerD == false)
-                                {
+                                @{
+                                    if (ViewBag.Visibility == 1)
+                                    {
+                                        if (@question.AnswerD == true)
+                                        {
+                                            answerD = "True";
+                                        }
+                                        else if (@question.AnswerD == false)
+                                        {
 
-                                    answerD = "False";
-                                }
-                                else if (@question.AnswerD == null)
-                                {
-                                    answerD = "-";
-                                }
-                            }
-                            else
-                            {
+                                            answerD = "False";
+                                        }
+                                        else if (@question.AnswerD == null)
+                                        {
+                                            answerD = "-";
+                                        }
+                                    }
+                                    else
+                                    {
                                 
-                            }
-                        }
-                        @(answerD)
-                </p> 
-                </div>
-            </div>
-            <!--Child5-->
-            <div class="row">
-                <div class="col">
-                <p class="card-text">e) @question.ChildE</p> 
-                </div>
-                <div class="col col-2">
-                <p class="card-text">
-                        @{
-                            if (ViewBag.Visibility == 1)
-                            {
-                                if (@question.AnswerE == true)
-                                {
-                                    answerE = "True";
+                                    }
                                 }
-                                else if (@question.AnswerE == false)
-                                {
-                                    answerE = "False";
-                                }
-                                else if (@question.AnswerE == null)
-                                {
-                                    answerE = "-";
-                                }
-                            }
-                            else
-                            {
+                                @(answerD)
+                        </p> 
+                        </div>
+                    </div>
+                    <!--Child5-->
+                    <div class="row">
+                        <div class="col">
+                        <p class="card-text">e) @question.ChildE</p> 
+                        </div>
+                        <div class="col col-2">
+                        <p class="card-text">
+                                @{
+                                    if (ViewBag.Visibility == 1)
+                                    {
+                                        if (@question.AnswerE == true)
+                                        {
+                                            answerE = "True";
+                                        }
+                                        else if (@question.AnswerE == false)
+                                        {
+
+                                            answerE = "False";
+                                        }
+                                        else if (@question.AnswerE == null)
+                                        {
+                                            answerE = "-";
+                                        }
+                                    }
+                                    else
+                                    {
                                 
-                            }
-                        }
-                        @(answerE)
-                </p> 
-                </div>
-            </div>
-        </div>
-    </div>
-}
+                                    }
+                                }
+                                @(answerE)
+                        </p> 
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+        }
+      </div>
+
+      <!-- Ads Sidebar Widgets Column -->
+      <div class="col-md-3">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
+             crossorigin="anonymous"></script>
+        <!-- Vertical Ad Unit -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7010150994074481"
+             data-ad-slot="6500703860"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+</div>

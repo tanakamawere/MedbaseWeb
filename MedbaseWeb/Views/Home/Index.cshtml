@@ -42,6 +42,20 @@
     </div>
 </header>
 
+<!--Ad Unit N1-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
+     crossorigin="anonymous"></script>
+<!-- Flat Ad Unit -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7010150994074481"
+     data-ad-slot="6187172230"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 <hr />
 
 <!-- Blog preview section-->
@@ -51,7 +65,7 @@
             <div class="col-lg-8 col-xl-6">
                 <div class="text-center">
                     <h2 class="fw-bolder">😁Want to learn something new?</h2>
-                    <p class="lead fw-normal text-muted mb-5">Read our articles on studying methods, books and other tips and tricks</p>
+                    <p class="lead fw-normal text-muted mb-5">New articles every <em>Monday at 6pm</em>, touching on topics like psychology, money, studying and book reviews.</p>
                 </div>
             </div>
         </div>
@@ -77,7 +91,31 @@
                                         <div class="d-flex align-items-center">
                                             <div class="small">
                                                 <div class="fw-bold">@Html.DisplayFor(modelItem => item.Writer)</div>
-                                                <div class="text-muted">@Html.DisplayFor(modelItem => item.DatePosted)</div>
+                                                <div class="text-muted">
+                                                @{
+                                                    string? returnDate = "";
+                                                    DateTime date = item.DatePosted;
+                                                    int dateDiff = (DateTime.Today - date).Days;
+
+                                                    if (date == DateTime.Today)
+                                                    {
+                                                        returnDate = "Posted Today";
+                                                    }
+                                                    else if (dateDiff == 1)
+                                                    {
+                                                        returnDate = "Posted 1 day ago";
+                                                    }
+                                                    else if (dateDiff <= 7)
+                                                    {
+                                                        returnDate = $"Posted {dateDiff} days ago";
+                                                    }
+                                                    else
+                                                    {
+                                                        returnDate = date.ToString("MMMM dd yyyy");
+                                                    }
+                                                }
+                                                @Html.Raw(returnDate)
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -93,6 +131,20 @@
             </a>
         </div>
     </div>
+
+    <!--Ad unit N2-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
+            crossorigin="anonymous"></script>
+    <!-- Flat Ad Unit -->
+    <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-7010150994074481"
+            data-ad-slot="6187172230"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+    <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </section>
 <!-- Random section-->
 <section class="py-5" id="TestCreator">
@@ -133,6 +185,20 @@
         </li>
       </ul>
     </div>
+
+    <!--Ad unit N3-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
+            crossorigin="anonymous"></script>
+    <!-- Flat Ad Unit -->
+    <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-7010150994074481"
+            data-ad-slot="6187172230"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+    <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 </section>
 
 <!--Mobile App Sections-->
@@ -190,6 +256,20 @@
         </div>
     </div>
 </div>
+
+<!--Ad unit N4-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
+            crossorigin="anonymous"></script>
+    <!-- Flat Ad Unit -->
+    <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-7010150994074481"
+            data-ad-slot="6187172230"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+    <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
 <!-- Call to action-->
 <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">

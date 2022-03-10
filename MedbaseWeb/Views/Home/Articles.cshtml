@@ -17,10 +17,8 @@
                         Articles
                     </h1>
                     <p class="lead fw-normal text-black-50 mb-4">
-                        Here we share study tips, links, guides to learn 
-                        <em>faster</em> 
-                        and 
-                        <em>effectively</em>!
+                         Welcome to our Articles. 
+                         New articles every <em>Monday at 6pm</em>, touching on topics like psychology, money, studying and book reviews.
                     </p>
                 </div>
             </div>
@@ -32,31 +30,88 @@
     </div>
 </header>
 
+<!--Ad unit N2-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
+            crossorigin="anonymous"></script>
+    <!-- Flat Ad Unit -->
+    <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-7010150994074481"
+            data-ad-slot="6187172230"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+    <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
-@foreach(var item in Model)
-{    
-            <!-- Page Content-->
-                <div class="container px-2 mb-3">
-                    <div class="card border-0 shadow rounded-3 overflow-hidden">
-                        <div class="card-body p-0">
-                            <div class="row gx-0">
-                                <div class="col-lg-6 col-xl-5 py-lg-5">
-                                    <div class="p-4 p-md-5">
-                                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">By @Html.DisplayFor(modelItem => item.Writer) on @Html.DisplayFor(modelItem => item.DatePosted)</div>
-                                        <div class="h2 fw-bolder">@Html.DisplayFor(modelItem => item.Title)</div>
-                                        <p>@Html.DisplayFor(modelItem => item.Summary)</p>
-                                        <a class="stretched-link text-decoration-none" asp-action="ArticleView" asp-route-id="@item.Id">
-                                            Read more
-                                            <i class="bi bi-arrow-right"></i>
-                                        </a>
+<div class="row gx-5">
+            @foreach(Article item in Model)
+                {
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.ImageURL)" alt="..." />
+                                <div class="card-body p-4">
+                                    <a class="text-decoration-none link-dark stretched-link" asp-action="ArticleView" asp-route-id="@item.Id">
+                                        <h5 class="card-title mb-3">
+                                            @Html.DisplayFor(modelItem => item.Title)
+                                        </h5>
+                                    </a>
+                                    <p class="card-text mb-0">
+                                        @Html.DisplayFor(modelItem => item.Summary)
+                                    </p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex align-items-end justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <div class="small">
+                                                <div class="fw-bold">@Html.DisplayFor(modelItem => item.Writer)</div>
+                                                <div class="text-muted">
+                                                @{
+                                                    string? returnDate = "";
+                                                    DateTime date = item.DatePosted;
+                                                    int dateDiff = (DateTime.Today - date).Days;
+
+                                                    if (date == DateTime.Today)
+                                                    {
+                                                        returnDate = "Posted Today";
+                                                    }
+                                                    else if (dateDiff == 1)
+                                                    {
+                                                        returnDate = "Posted 1 day ago";
+                                                    }
+                                                    else if (dateDiff <= 7)
+                                                    {
+                                                        returnDate = $"Posted {dateDiff} days ago";
+                                                    }
+                                                    else
+                                                    {
+                                                        returnDate = date.ToString("MMMM dd yyyy");
+                                                    }
+                                                }
+                                                @Html.Raw(returnDate)
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-xl-7"><div class="bg-featured-blog" style="background-image: url('@Html.DisplayFor(modelItem => item.ImageURL)')"></div></div>
                             </div>
                         </div>
-                    </div>
-                </div>
-}
+                }
+        </div>
+
+<!--Ad unit N2-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
+            crossorigin="anonymous"></script>
+    <!-- Flat Ad Unit -->
+    <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-7010150994074481"
+            data-ad-slot="6187172230"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+    <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
 <!-- Call to action-->
 <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">

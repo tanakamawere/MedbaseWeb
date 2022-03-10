@@ -2,9 +2,9 @@
 {
     public class ApiService
     {
-        private List<Question> questions;
-        private List<Article> articles;
-        private HttpClient _httpClient;
+        private List<Question>? questions;
+        private List<Article>? articles;
+        private HttpClient? _httpClient;
         public string GetAddress()
         {
             return "https://medbaseapi.azurewebsites.net";
@@ -95,6 +95,7 @@
             {
                 throw;
             }
+            articles?.Reverse();
             return articles;
         }
         public Article GetArticle(int id)
