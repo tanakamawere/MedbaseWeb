@@ -29,7 +29,7 @@
         <hr>
 
         <!-- Date/Time -->
-        <p>@Html.DisplayFor(model => model.DatePosted)</p>
+        <p>@Html.Raw(Model.DatePosted.ToString("dddd, dd MMMM yyyy"))</p>
 
         <hr>
 

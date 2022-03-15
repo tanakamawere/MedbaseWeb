@@ -92,29 +92,7 @@
                                             <div class="small">
                                                 <div class="fw-bold">@Html.DisplayFor(modelItem => item.Writer)</div>
                                                 <div class="text-muted">
-                                                @{
-                                                    string? returnDate = "";
-                                                    DateTime date = item.DatePosted;
-                                                    int dateDiff = (DateTime.Today - date).Days;
-
-                                                    if (date == DateTime.Today)
-                                                    {
-                                                        returnDate = "Posted Today";
-                                                    }
-                                                    else if (dateDiff == 1)
-                                                    {
-                                                        returnDate = "Posted 1 day ago";
-                                                    }
-                                                    else if (dateDiff <= 7)
-                                                    {
-                                                        returnDate = $"Posted {dateDiff} days ago";
-                                                    }
-                                                    else
-                                                    {
-                                                        returnDate = date.ToString("MMMM dd yyyy");
-                                                    }
-                                                }
-                                                @Html.Raw(returnDate)
+                                                @Html.Raw(item.DatePosted.ToString("dddd, dd MMMM yyyy"))
                                                 </div>
                                             </div>
                                         </div>
