@@ -34,15 +34,6 @@
 
 
      <div class="text-center m-2">
-
-            <select name="options.pageSize" class="form-control ml-1 mr-1">
-                 <option selected disabled>Questions/page</option>
-                 @foreach (int val in new int[] { 5, 10}) 
-                 {
-                    <option value="@val" selected="@(Model.PageSize == val)">@val</option>
-                 }
-             </select>
-
              <select name="options.topic" class="form-control ml-1 mr-1">
                  <option selected disabled>Choose Topic</option>
                 @foreach (Topic topic in new Topic[]
@@ -79,10 +70,6 @@
                     </option>
                  }
              </select>
-
-             <h6 class="text-muted">@(Model.NumberOfQuestions) 
-                 MCQs on Selected Topic
-            </h6>
              <input type="hidden" name="options.currentPage" value="1" />
              <button type="submit" class="btn btn-primary">Load</button>
      </div>

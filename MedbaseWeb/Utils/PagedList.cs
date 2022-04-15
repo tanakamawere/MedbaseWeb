@@ -24,7 +24,7 @@
     public class QueryOptions
     {
         public int CurrentPage { get; set; } = 1;
-        public int PageSize { get; set; } = 10;
+        public int PageSize { get; } = 10;
         public int Topic { get; set; } = 1;
         public int AnswerVisibility { get; set; } = 0;
     }

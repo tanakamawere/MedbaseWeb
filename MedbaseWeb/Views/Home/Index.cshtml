@@ -6,20 +6,17 @@
     ViewData["Thumbnail"] = "http://medbase.co.zw/img/medbase_plain.jpeg";
     ViewData["Keywords"] = "Anatomy, Questions, MCQs, With Answers, Physiology, Medbase, Multiple Choice Questions";
 }
+
 <!-- Header-->
-<header class="bg-white py-5">
-    <div class="container px-5">
+<header class="bg-white py-2 home-gradient">
+    <div class="container px-5 medbase-font">
         <div class="row gx-5 align-items-center justify-content-center">
-            <div class="col-xl-6 col-xxl-6 text-center">
-                <img class="img-fluid rounded-3 my-5"
-                     src="~/img/home_illustration.svg" alt="..." />
-            </div>
             <div class="col-lg-6 col-xl-6 col-xxl-6">
                 <div class="my-5 text-center text-xl-start">
-                    <h1 class="display-1 fw-bolder text-dark mb-2">
+                    <h1 class="display-1 fw-bolder text-light mb-2">
                         Welcome to Medbase
                     </h1>
-                    <p class="lead fw-normal text-black-50 mb-4">
+                    <p class="fw-normal text-black-50 mb-4">
                         The biggest repository of Anatomy & Physiology MCQs on the internet!😉
                     </p>
                     <br />
@@ -31,38 +28,27 @@
                                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                         <a class="nav-link text-dark" asp-area="" asp-controller="Questions" asp-action="Anatomy">Anatomy</a>
                                         <a class="nav-link text-dark" asp-area="" asp-controller="Questions" asp-action="Physiology">Physiology</a>
-                                        <a class="nav-link text-dark" href="#TestCreator">Test Creator</a>
                                       </div>
                                     </div>
-                                    <a class="btn btn-outline-dark btn-lg px-4" href="#howToSection">Learn More</a>
                     </div>
                 </div>
+            </div>
+            <div class="col-xl-6 col-xxl-6 text-center">
+               
+                <img class="img-fluid rounded-3 my-5"
+                     src="~/img/home_picture.jpg" alt="..." />
             </div>
         </div>
     </div>
 </header>
 
-<!--Ad Unit N1-->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
-     crossorigin="anonymous"></script>
-<!-- Flat Ad Unit -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7010150994074481"
-     data-ad-slot="6187172230"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-<hr />
+<hr/>
 
 <!-- Blog preview section-->
 <section class="py-5">
     <div class="container px-5 my-5">
         <div class="row gx-5 justify-content-center">
-            <div class="col-lg-8 col-xl-6">
+            <div class="col-lg-8 col-xl-6 medbase-font">
                 <div class="text-center">
                     <h2 class="fw-bolder">😁Want to learn something new?</h2>
                     <p class="lead fw-normal text-muted mb-5">New articles every <em>Monday at 6pm</em>, touching on topics like psychology, money, studying and book reviews.</p>
@@ -110,145 +96,3 @@
         </div>
     </div>
 </section>
-<!-- Random section-->
-<section class="py-5" id="TestCreator">
-    <div class="jumbotron">
-      <h1 class="display-3 fw-bolder">Test Creator</h1>
-      <p class="lead">Make a custom test out of 20 on each topic in any course</p>
-      <hr class="my-4">
-      <ul class="nav justify-content-center">
-          <li class="dropdown m-1 nav-item">
-            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
-            Anatomy
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="1">Upper Limb</a>
-                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="2">Thorax</a>
-                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="3">Abdomen</a>
-                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="4">Pelvis &  Perineum</a>
-                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="5">Lower Limb</a>
-                    <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="6">Head & Neck</a>
-            </div>
-        </li>
-          <li class="dropdown m-1 nav-item">
-            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
-            Physiology
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="7">Cell</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="8">Nerve & Muscle</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="9">Blood</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="10">Endocrinology</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="11">GIT</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="12">Reproduction</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="13">Cardiovascular System</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="14">Renal</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="15">Respiratory</a>
-                                        <a class="dropdown-item" asp-controller="Questions" asp-action="Index" asp-route-topicSelected="16">Neurophysiology</a>
-            </div>
-        </li>
-      </ul>
-    </div>
-</section>
-
-
-    <!--Ad unit N2-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
-            crossorigin="anonymous"></script>
-    <!-- Flat Ad Unit -->
-    <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-7010150994074481"
-            data-ad-slot="6187172230"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-    <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-<!--Mobile App Sections-->
-<div class="py-5" id="howToSection">
-    <div class="container px-5 my-5">
-        <div class="row gx-5 align-items-center justify-content-center">
-            <div class="col-lg-8 col-xl-5 text-center">
-                <div class="text-dark">
-                    
-                    <h2 class="text-dark">How To</h2>
-
-                    <p class="lead fw-normal text-muted mb-0">
-                        From the navigation bar, you can select Anatomy or Physiology.
-                        Then select the topic of your choice.
-                    </p>
-                    <br/>
-                    <h4 class="text-dark">Medbase App for Android and iOS</h4>
-
-                    <p class="lead fw-normal text-muted mb-0">
-                        We are working hard for you to be able to access the questions offline
-                        through a mobile application which is in the works. 
-                        Release date is expected to be Q2 2022.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xl-7">
-                <img class="img-fluid rounded-3 my-5"
-                     src="~/img/mobile_application.svg" alt="..." />
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Testimonial section-->
-<div class="py-5 bg-light">
-    <div class="container px-5 my-5">
-        <div class="row gx-5 justify-content-center">
-            <div class="col-lg-10 col-xl-7">
-                <div class="text-center">
-                    <div class="h3 mb-4">
-                        <em>"Working with Medbase has saved me tons of studying time 
-                        when preparing for tests!
-                         I am now more efficient in studying because I have a ready source of 
-                         questions to quiz myself at the end of the day."</em>
-                     </div>
-                    <div class="d-flex align-items-center justify-content-center">
-                        <div class="fw-bold h6">
-                            Tadiwanashe Gandiza
-                            <span class="fw-bold text-primary mx-1">/</span>
-                            Nursing, UZ
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <!--Ad unit N3-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7010150994074481"
-            crossorigin="anonymous"></script>
-    <!-- Flat Ad Unit -->
-    <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-7010150994074481"
-            data-ad-slot="6187172230"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-    <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-<!-- Call to action-->
-<aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
-    <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
-        <div class="mb-4 mb-xl-0">
-            <div class="fs-3 fw-bold text-white">New articles, delivered to you.</div>
-            <div class="text-white-50">Sign up for our emails for the latest updates.</div>
-        </div>
-        <div class="ms-xl-4">
-            <div class="input-group mb-2">
-                <div style="text-align: left" class="sender-form-field" data-sender-form-id="kzte3j42ejaywdh66hl"></div>
-            </div>
-            <div class="small text-white-50">We care about privacy, and will never share your data.</div>
-        </div>
-    </div>
-</aside>
