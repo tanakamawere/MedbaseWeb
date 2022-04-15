@@ -60,7 +60,7 @@
         {
             _httpClient = new HttpClient();
             _httpClient.BaseAddress = new Uri($"{GetAddress()}/articles");
-            HttpResponseMessage responseTask = _httpClient.GetAsync($"{_httpClient.BaseAddress}/select/6").Result;
+            HttpResponseMessage responseTask = _httpClient.GetAsync($"{_httpClient.BaseAddress}/select/3").Result;
 
             try
             {
