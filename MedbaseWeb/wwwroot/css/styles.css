@@ -5,12 +5,12 @@ body {
 
 .home-gradient {
     background: rgb(97,150,244);
-    background: linear-gradient(270deg, rgba(97,150,244,1) 0%, rgba(82,166,236,1) 41%, rgba(56,177,203,1) 100%);
+    background: linear-gradient(180deg, rgba(97,150,244,1) 0%, rgba(82,166,236,1) 41%, rgba(56,177,203,1) 100%);
 }
 
 .navbar-gradient {
-    background: rgb(110,139,169);
-    background: linear-gradient(270deg, rgba(110,139,169,1) 0%, rgba(91,193,226,1) 41%, rgba(198,255,255,1) 100%);
+    background: rgb(97,150,244);
+    background: linear-gradient(180deg, rgba(97,150,244,1) 0%, rgba(82,166,236,1) 41%, rgba(110,210,232,1) 100%);
 }
 
 .medbase-font {
