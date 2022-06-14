@@ -34,6 +34,11 @@ namespace MedbaseWeb.Controllers
         {
             return View();
         }
+        [Route("downloads")]
+        public IActionResult Downloads()
+        {
+            return View();
+        }
 
         [Route("articles")]
         public IActionResult Articles()
